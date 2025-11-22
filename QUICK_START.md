@@ -290,6 +290,9 @@ docker exec -it spikingbrain bash
 
 ### Import Errors
 ```bash
+# Make sure you're in the SpikingBrain-7B root directory
+cd /path/to/SpikingBrain-7B
+
 # Reinstall plugin
 pip uninstall vllm_hymeta
 pip install -e . --no-build-isolation --verbose

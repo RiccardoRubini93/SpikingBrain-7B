@@ -231,10 +231,10 @@ cp config.json config.json.backup
 
 ### Step 3: Run vLLM Inference
 
-Edit `run_model/run_model_vllm.py`:
+Edit `run_model/run_model_vllm.py` to set your model path:
 
 ```python
-# Modify model path (line 9)
+# In run_model_vllm.py, find the LLM initialization (around line 8-10)
 llm = LLM(
     model="/path/to/your/model",  # Update this path
     trust_remote_code=True,
@@ -451,10 +451,11 @@ int4 to -1/0/1: Time steps = X, firing rate = Y.YY
 int4 to Bitwise: Time steps = X, firing rate = Y.YY
 ```
 
-Generated visualization images:
-- `Binary_Lif_TX_N20.png`
-- `Ternary_Lif_TX_N20.png`
-- `Bitwise_Lif_TX_N20.png`
+Generated visualization images (filenames will include the actual time step count):
+- `Binary_Lif_T{X}_N20.png` (e.g., `Binary_Lif_T16_N20.png`)
+- `Ternary_Lif_T{X}_N20.png`
+- `Bitwise_Lif_T{X}_N20.png`
+- Bidirectional and complement variants
 
 ### Step 4: Run Comprehensive Tests
 
@@ -822,10 +823,13 @@ RuntimeError: flash_attn is not installed
 
 **Solutions:**
 ```bash
-# Install flash-attn (may take time)
+# Install flash-attn (may take time to compile)
 pip install flash-attn==2.7.3 --no-build-isolation
 
-# Or use SDPA backend
+# If you encounter dependency conflicts, try:
+pip install flash-attn==2.7.3 --no-build-isolation --no-deps
+
+# Or use SDPA backend as alternative
 export ATTENTION_BACKEND=sdpa
 ```
 
