@@ -3,7 +3,8 @@
 📄 Technical Report: [Chinese](SpikingBrain_Report_Chi.pdf) | [English](SpikingBrain_Report_Eng.pdf)  
 🚀 Arxiv: [arXiv:2509.05276](https://www.arxiv.org/abs/2509.05276)  
 🧩 Models: [Available Models](#available-models)   
-🔗 Demo: [OpenBayes贝式计算](https://openbayes.com/console/public/tutorials/eKBhv3jUkWw)    
+🔗 Demo: [OpenBayes贝式计算](https://openbayes.com/console/public/tutorials/eKBhv3jUkWw)  
+📖 **Local Testing**: [Quick Start Guide](QUICK_START.md) | [Comprehensive Tutorial](LOCAL_TESTING_TUTORIAL.md)
 
 ---
 
@@ -116,6 +117,12 @@ The model weights are hosted on **ModelScope**. Please select the appropriate ve
 - **Chat model (7B-SFT):** https://www.modelscope.cn/models/Panyuqi/V1-7B-sft-s3-reasoning
 - **Vision-language model (7B-SFT):** https://www.modelscope.cn/models/sherry12334/SpikingBrain-7B-VL
 - **Quantized weights (7B-W8ASpike):** https://www.modelscope.cn/models/Abel2076/SpikingBrain-7B-W8ASpike
+
+### Getting Started
+
+📚 **New to SpikingBrain?** Check out our guides:
+- **[Quick Start Guide](QUICK_START.md)** - Get up and running in 5 minutes
+- **[Local Testing Tutorial](LOCAL_TESTING_TUTORIAL.md)** - Comprehensive guide for testing all features
 
 ### Usage
 Example scripts are provided in [`run_model/`](run_model) for running the model with the released checkpoints. 
